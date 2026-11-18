@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+.DS_Store
+.chart-data-*/
+.presentation-build/
+.sic-build/
+.streamlit/secrets.toml
+reports/feedback.sqlite
+reports/feedback.sqlite-shm
+reports/feedback.sqlite-wal
+outputs/
+reports/*.pptx
+reports/sic_data_audit.json

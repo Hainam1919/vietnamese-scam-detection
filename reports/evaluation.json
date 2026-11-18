@@ -1,0 +1,105 @@
+{
+  "dataset_name": "Vietnamese Quality-Assured SMS Scam Dataset",
+  "dataset_version": "Hugging Face main · train.csv/test.csv retrieved 2026-10-15",
+  "license": "CC BY 4.0",
+  "label_mapping": {
+    "0": "legitimate",
+    "1": "spam/scam"
+  },
+  "train_size": 2394,
+  "test_size": 597,
+  "class_counts_train": {
+    "0": 1754,
+    "1": 640
+  },
+  "class_counts_test": {
+    "0": 439,
+    "1": 158
+  },
+  "selected_model": {
+    "name": "char_2_5",
+    "char_ngram": "(2, 5)",
+    "C": 1.0
+  },
+  "decision_threshold": {
+    "value": 0.030095530626167794,
+    "selection": "OOF train: maximize scam recall subject to precision >= 0.90 and threshold >= 0",
+    "oof_scam_precision": 0.9506933744221879,
+    "target_scam_precision": 0.9
+  },
+  "cv_results": [
+    {
+      "model": "char_2_5",
+      "char_ngram": "(2, 5)",
+      "C": 1.0,
+      "cv_macro_f1_mean": 0.9698077871072925,
+      "cv_macro_f1_std": 0.01017101178696343,
+      "cv_scam_recall_mean": 0.9640625
+    },
+    {
+      "model": "char_3_6_c2",
+      "char_ngram": "(3, 6)",
+      "C": 2.0,
+      "cv_macro_f1_mean": 0.9692215903387928,
+      "cv_macro_f1_std": 0.008412336322506377,
+      "cv_scam_recall_mean": 0.9609375
+    },
+    {
+      "model": "char_3_5",
+      "char_ngram": "(3, 5)",
+      "C": 1.0,
+      "cv_macro_f1_mean": 0.9687860905421563,
+      "cv_macro_f1_std": 0.008603367527758908,
+      "cv_scam_recall_mean": 0.9640625
+    }
+  ],
+  "metrics": {
+    "accuracy": 0.9363484087102177,
+    "macro_f1": 0.9218694034991045,
+    "scam_precision": 0.8296703296703297,
+    "scam_recall": 0.9556962025316456,
+    "scam_f1": 0.888235294117647
+  },
+  "confusion_matrix": [
+    [
+      408,
+      31
+    ],
+    [
+      7,
+      151
+    ]
+  ],
+  "classification_report": {
+    "legitimate": {
+      "precision": 0.983132530120482,
+      "recall": 0.929384965831435,
+      "f1-score": 0.955503512880562,
+      "support": 439.0
+    },
+    "scam": {
+      "precision": 0.8296703296703297,
+      "recall": 0.9556962025316456,
+      "f1-score": 0.888235294117647,
+      "support": 158.0
+    },
+    "accuracy": 0.9363484087102177,
+    "macro avg": {
+      "precision": 0.9064014298954058,
+      "recall": 0.9425405841815403,
+      "f1-score": 0.9218694034991045,
+      "support": 597.0
+    },
+    "weighted avg": {
+      "precision": 0.9425177434016813,
+      "recall": 0.9363484087102177,
+      "f1-score": 0.9377005337104773,
+      "support": 597.0
+    }
+  },
+  "software": {
+    "python": "3.11.9",
+    "scikit_learn": "1.9.1"
+  },
+  "seed": 42
+}
